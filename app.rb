@@ -25,7 +25,7 @@ end
 
 get "/sales_visits" do
   @salesVisit = SalesVisit.all
-  erb :index
+  erb :sales_visit
 end
 
 get "/create" do
