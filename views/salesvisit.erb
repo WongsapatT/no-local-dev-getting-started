@@ -9,11 +9,10 @@
 
     <% @salesVisits.each do |salesVisit| %>
       <tr>
-        <td><%= salesVisit.Account_Name__c %></td>
-        <td><%= salesVisit.Check_in__c %></td>
-        <td><%= salesVisit.Visit_Note__c %></td>
+        <td><%= salesVisit.account_name__c %></td>
+        <td><%= salesVisit.check_in__c %></td>
+        <td><%= salesVisit.visit_note__c %></td>
       </tr>
     <% end %>
   </table>
-
 </div>
