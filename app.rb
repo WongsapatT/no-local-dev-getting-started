@@ -20,7 +20,6 @@ class Salesvisit < ActiveRecord::Base
 end
 
 get "/salesvisits" do
-  puts Salesvisit.all + 'Hello'
   @salesVisits = Salesvisit.all
   erb :salesvisit
 end
