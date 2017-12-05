@@ -16,11 +16,11 @@ end
 
 
 class Salesvisit < ActiveRecord::Base
-  self.table_name = 'salesforce.Sales_Visit__C'
+  self.table_name = 'salesforce.sales_visit__c'
 end
 
 get "/salesvisits" do
-  @salesVisits = SalesVisit.all
+  @salesVisits = Salesvisit.all
   erb :salesvisit
 end
 
