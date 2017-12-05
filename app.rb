@@ -14,11 +14,6 @@ end
 #  self.table_name = 'salesforce.contact'
 #end
 
-get "/contacts" do
-  #@contacts = Contact.all
-  @salesVisits = Salesvisit.all
-  erb :index
-end
 
 class Salesvisit < ActiveRecord::Base
   self.table_name = 'salesforce.sales_visit__c'
@@ -27,6 +22,13 @@ end
 get "/salesvisits" do
   @salesVisits = SalesVisit.all
   erb :salesvisit
+end
+
+
+get "/contacts" do
+  #@contacts = Contact.all
+  @salesVisits = Salesvisit.all
+  erb :index
 end
 
 get "/create" do
