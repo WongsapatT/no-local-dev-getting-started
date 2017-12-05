@@ -10,14 +10,15 @@ get "/" do
 end
 
 
-#class Contact < ActiveRecord::Base
-#  self.table_name = 'salesforce.contact'
-#end
-
-
-class Salesvisit < ActiveRecord::Base
-  self.table_name = 'salesforce.sales_visit__c'
+class Contact < ActiveRecord::Base
+ # self.table_name = 'salesforce.contact'
+  self.table_name = 'salesforce.Sales_Visit__C'
 end
+
+
+#class Salesvisit < ActiveRecord::Base
+#  self.table_name = 'salesforce.Sales_Visit__C'
+#end
 
 get "/salesvisits" do
   @salesVisits = SalesVisit.all
@@ -27,7 +28,7 @@ end
 
 get "/contacts" do
   #@contacts = Contact.all
-  @salesVisits = Salesvisit.all
+  @salesVisits = Contact.all
   erb :index
 end
 
