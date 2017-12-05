@@ -24,8 +24,8 @@ class SalesVisit < ActiveRecord::Base
 end
 
 get "/sales_visits" do
-  @salesVisit = SalesVisit.all
-  erb :sales_visit
+  @salesVisits = SalesVisit.all
+  erb :salesvisit
 end
 
 get "/create" do
