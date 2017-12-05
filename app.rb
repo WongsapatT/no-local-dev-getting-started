@@ -16,6 +16,7 @@ end
 
 get "/contacts" do
   @contacts = Contact.all
+  @salesVisits = SalesVisit.all
   erb :index
 end
 
